@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Login = () => {
 
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
   const submitHandler = (e) => {
-    
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
 
     e.preventDefault()
 
@@ -14,7 +14,7 @@ const Login = () => {
   }
 
   return (
-    <div className='flex h-screen w-screen items-center justify-center'>
+    <div className='bg-[#1c1c1c] flex h-screen w-screen items-center justify-center'>
 
       <div className='p-20 border-2 border-emerald-600 rounded-xl'>
 

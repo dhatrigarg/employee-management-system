@@ -3,9 +3,8 @@ import React from 'react'
 const Header = () => {
   return (
     <div
-    className='flex items-end justify-between'>
-        <h1
-        className='text-2xl font-medium'>
+    className='flex items-end text-white justify-between'>
+        <h1 className='text-2xl font-medium'>
           Hi, 
           <br/> 
           <span
