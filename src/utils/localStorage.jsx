@@ -1,0 +1,270 @@
+const employees = [
+  {
+    id: 1,
+    email: "employee1@example.com",
+    password: "123",
+    tasks: [
+      {
+        taskTitle: "Design UI",
+        taskDescription: "Create modern UI for dashboard",
+        taskDate: "2026-07-28",
+        category: "Design",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Fix bugs",
+        taskDescription: "Resolve frontend issues",
+        taskDate: "2026-07-27",
+        category: "Development",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Write docs",
+        taskDescription: "Prepare project documentation",
+        taskDate: "2026-07-25",
+        category: "Documentation",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      }
+    ]
+  },
+  {
+    id: 2,
+    email: "employee2@example.com",
+    password: "123",
+    tasks: [
+      {
+        taskTitle: "API integration",
+        taskDescription: "Connect frontend with backend APIs",
+        taskDate: "2026-07-29",
+        category: "Development",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Testing",
+        taskDescription: "Perform unit testing",
+        taskDate: "2026-07-26",
+        category: "Testing",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        taskTitle: "Deploy app",
+        taskDescription: "Deploy app to production",
+        taskDate: "2026-07-24",
+        category: "DevOps",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      },
+      {
+        taskTitle: "Update README",
+        taskDescription: "Improve project README",
+        taskDate: "2026-07-27",
+        category: "Documentation",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false
+      }
+    ]
+  },
+  {
+    id: 3,
+    email: "employee3@example.com",
+    password: "123",
+    tasks: [
+      {
+        taskTitle: "Create database",
+        taskDescription: "Setup MongoDB database",
+        taskDate: "2026-07-25",
+        category: "Database",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        taskTitle: "Optimize queries",
+        taskDescription: "Improve DB performance",
+        taskDate: "2026-07-28",
+        category: "Database",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Backup data",
+        taskDescription: "Take weekly backup",
+        taskDate: "2026-07-26",
+        category: "Maintenance",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      }
+    ]
+  },
+  {
+    id: 4,
+    email: "employee4@example.com",
+    password: "123",
+    tasks: [
+      {
+        taskTitle: "Setup project",
+        taskDescription: "Initialize React project",
+        taskDate: "2026-07-24",
+        category: "Development",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        taskTitle: "Code review",
+        taskDescription: "Review teammate code",
+        taskDate: "2026-07-27",
+        category: "Review",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Refactor code",
+        taskDescription: "Improve code structure",
+        taskDate: "2026-07-28",
+        category: "Development",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Team meeting",
+        taskDescription: "Attend weekly sync",
+        taskDate: "2026-07-26",
+        category: "Meeting",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        taskTitle: "Fix UI issues",
+        taskDescription: "Resolve layout problems",
+        taskDate: "2026-07-25",
+        category: "Design",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      }
+    ]
+  },
+  {
+    id: 5,
+    email: "employee5@example.com",
+    password: "123",
+    tasks: [
+      {
+        taskTitle: "Research feature",
+        taskDescription: "Analyze new feature requirements",
+        taskDate: "2026-07-29",
+        category: "Research",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Implement feature",
+        taskDescription: "Develop new module",
+        taskDate: "2026-07-30",
+        category: "Development",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false
+      },
+      {
+        taskTitle: "Write tests",
+        taskDescription: "Create test cases",
+        taskDate: "2026-07-27",
+        category: "Testing",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        taskTitle: "Fix errors",
+        taskDescription: "Resolve runtime issues",
+        taskDate: "2026-07-26",
+        category: "Debugging",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      },
+      {
+        taskTitle: "Deploy update",
+        taskDescription: "Push latest changes",
+        taskDate: "2026-07-28",
+        category: "DevOps",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      },
+      {
+        taskTitle: "Client feedback",
+        taskDescription: "Discuss with client",
+        taskDate: "2026-07-29",
+        category: "Communication",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      }
+    ]
+  }
+];
+
+const admin = [
+  {
+    id: 1,
+    email: "admin@example.com",
+    password: "123"
+  }
+];
+
+
+export const setLocalStorage = () => {
+    localStorage.setItem('employees',JSON.stringify(employees))
+    localStorage.setItem('admin',JSON.stringify(admin))
+    
+}
+
+export const getLocalStorage = () => {
+    const employees = JSON.parse( localStorage.getItem('employees'))
+    const admin = JSON.parse( localStorage.getItem('admin'))
+
+    console.log(employees)
+    console.log(admin)
+}

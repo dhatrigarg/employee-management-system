@@ -2,7 +2,7 @@ import React from 'react'
 
 const Createtask = () => {
   return (
-    <div className='mt-10 p-5 text-white bg-[#1c1c1c] rounded-xl'>
+    <div className='mt-10 p-5 text-white bg-[#1c1c1c] '>
       <form className='flex flex-wrap w-full items-start justify-between'>
 
     
@@ -49,7 +49,7 @@ const Createtask = () => {
         <div className='w-full md:w-2/5 flex flex-col items-start mt-4 md:mt-0'>
           <h3 className='text-sm text-gray-300 mb-0.5'>Description</h3>
           <textarea 
-            className='w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border border-gray-400'
+            className='w-full h-57 text-sm py-2 px-4 rounded outline-none bg-transparent border border-gray-400'
           ></textarea>
         </div>
 

@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from '../Other/Header'
 import Createtask from '../Other/Createtask'
+import AllTask from '../Other/AllTask'
 
 const AdminDashboard = () => {
   return (
     <div className='p-10 bg-black h-screen w-full'>
         <Header/>
-        <Createtask/>    
+        <Createtask/>
+        <AllTask/>  
     </div>
   )
 }
