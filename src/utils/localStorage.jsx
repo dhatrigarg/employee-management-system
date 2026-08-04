@@ -12,7 +12,7 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Fix bugs",
@@ -22,7 +22,7 @@ const employees = [
         active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Write docs",
@@ -32,9 +32,9 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
-      }
-    ]
+        failed: false,
+      },
+    ],
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Testing",
@@ -59,7 +59,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Deploy app",
@@ -69,7 +69,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true
+        failed: true,
       },
       {
         taskTitle: "Update README",
@@ -79,9 +79,9 @@ const employees = [
         active: true,
         newTask: false,
         completed: false,
-        failed: false
-      }
-    ]
+        failed: false,
+      },
+    ],
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Optimize queries",
@@ -106,7 +106,7 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Backup data",
@@ -116,9 +116,9 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true
-      }
-    ]
+        failed: true,
+      },
+    ],
   },
   {
     id: 4,
@@ -133,7 +133,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Code review",
@@ -143,7 +143,7 @@ const employees = [
         active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Refactor code",
@@ -153,7 +153,7 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Team meeting",
@@ -163,7 +163,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Fix UI issues",
@@ -173,9 +173,9 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true
-      }
-    ]
+        failed: true,
+      },
+    ],
   },
   {
     id: 5,
@@ -190,7 +190,7 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Implement feature",
@@ -200,7 +200,7 @@ const employees = [
         active: true,
         newTask: false,
         completed: false,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Write tests",
@@ -210,7 +210,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: true,
-        failed: false
+        failed: false,
       },
       {
         taskTitle: "Fix errors",
@@ -220,7 +220,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true
+        failed: true,
       },
       {
         taskTitle: "Deploy update",
@@ -230,7 +230,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true
+        failed: true,
       },
       {
         taskTitle: "Client feedback",
@@ -240,30 +240,28 @@ const employees = [
         active: true,
         newTask: true,
         completed: false,
-        failed: false
-      }
-    ]
-  }
+        failed: false,
+      },
+    ],
+  },
 ];
 
 const admin = [
   {
     id: 1,
     email: "admin@example.com",
-    password: "123"
-  }
+    password: "123",
+  },
 ];
 
-
 export const setLocalStorage = () => {
-    localStorage.setItem('employees',JSON.stringify(employees))
-    localStorage.setItem('admin',JSON.stringify(admin))
-    
-}
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
 
 export const getLocalStorage = () => {
-    const employees = JSON.parse( localStorage.getItem('employees'))
-    const admin = JSON.parse( localStorage.getItem('admin'))
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem("admin"));
 
-    return {employees, admin}
-}
+  return { employees, admin };
+};
