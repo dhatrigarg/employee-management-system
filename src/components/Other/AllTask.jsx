@@ -1,44 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 const AllTask = () => {
+
+  const authData = useContext(AuthContext)
+  
   return (
-    <div className="p-5 mt-5 h-48 bg-[#1c1c1c] rounded overflow-auto">
-      <div className="py-2 px-4 mb-2 bg-[#5787f0] flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
+    <div className="p-5 mt-5 bg-[#1c1c1c] rounded">
+      <div className="py-2 px-4 mb-2 text-white text-lg border-2 border-emerald-500 flex justify-between rounded">
+        <h2 className="w-1/5">Employee Name</h2>
+        <h2 className="w-1/5">New Task</h2>
+        <h2 className="w-1/5">Active</h2>
+        <h2 className="w-1/5">Completed</h2>
+        <h2 className="w-1/5">Failed</h2>
       </div>
-
-      <div className="py-2 px-4 mb-2 bg-[#9051fc] flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
+      <div className="">
+      {authData.employees.map(function(elem, idx){
+        return <div key={idx} className="py-2 px-4 mb-2 bg-[#2c2c2c] flex justify-between rounded">
+        <h2 className="w-1/5 font-bold text-white">{elem.firstName}</h2>
+        <h2 className="w-1/5 font-medium text-blue-400">{elem.newTask}</h2>
+        <h2 className="w-1/5 font-medium text-amber-300">{elem.activeTask}</h2>
+        <h2 className="w-1/5 font-medium text-green-400">{elem.completedTask}</h2>
+        <h2 className="w-1/5 font-medium text-red-500">{elem.failedTask}</h2>
       </div>
-
-      <div className="py-2 px-4 mb-2 bg-amber-300 flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
-      </div>
-
-      <div className="py-2 px-4 mb-2 bg-lime-500 flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
-      </div>
-
-      <div className="py-2 px-4 mb-2 bg-fuchsia-400 flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
-      </div>
-
-      <div className="py-2 px-4 mb-2 bg-taupe-400 flex justify-between rounded">
-        <h2>Dhatri</h2>
-        <h3>Make a UI Design</h3>
-        <h5>Status</h5>
-      </div>
-    </div>
+      })}
+    </div></div>
   );
 };
 
