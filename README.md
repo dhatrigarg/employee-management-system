@@ -1,13 +1,27 @@
-# 🚀 React + Tailwind UI with LocalStorage
+# Employee Management System
 
-This project is a fully functional frontend application built using **React** and **Tailwind CSS**, with data persistence handled using **localStorage**.
+A simple Employee Management System built with **React** and **Tailwind CSS**.
 
-## ✨ Features
-- ⚛️ Built with React (component-based architecture)
-- 🎨 Styled using Tailwind CSS
-- 💾 Data stored in browser using localStorage
+### Features
 
-## 🛠️ Tech Stack
-- React
-- Tailwind CSS
-- LocalStorage API
+* Admin and Employee dashboards
+* Admin can assign tasks
+* Employees can accept tasks
+* Track completed and failed tasks
+* Employee task status
+* Data saved using localStorage
+* Responsive UI
+
+### Tech Used
+
+* React
+* Tailwind CSS
+* JavaScript
+* localStorage
+
+### Run Locally
+
+```bash
+npm install
+npm run dev
+```
