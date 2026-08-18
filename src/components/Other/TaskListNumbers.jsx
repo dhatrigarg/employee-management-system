@@ -1,6 +1,6 @@
 import React from "react";
 
-const TaskListNumbers = ({data}) => {
+const TaskListNumbers = ({ data }) => {
   return (
     <div className="mt-10 justify-between grid grid-cols-2 md:grid-cols-4 gap-4 screen">
       <div className="py-6 px-9 bg-red-400 rounded-xl">
